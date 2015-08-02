@@ -17,7 +17,7 @@ import javax.ws.rs.core.Response;
 import org.apache.log4j.Logger;
 import org.jivesoftware.openfire.SharedGroupException;
 import org.jivesoftware.openfire.XMPPServer;
-import org.jivesoftware.openfire.plugin.rest.RESTServicePlugin;
+import org.jivesoftware.openfire.plugin.rest.GameCenterPlugin;
 import org.jivesoftware.openfire.plugin.rest.controller.UserServiceLegacyController;
 import org.jivesoftware.openfire.user.UserAlreadyExistsException;
 import org.jivesoftware.openfire.user.UserNotFoundException;
@@ -33,13 +33,13 @@ public class UserServiceLegacy {
 	@Context
 	private HttpServletResponse response;
 
-	private RESTServicePlugin plugin;
+	private GameCenterPlugin plugin;
 
 	private UserServiceLegacyController userServiceController;
 
 	@PostConstruct
 	public void init() {
-		plugin = (RESTServicePlugin) XMPPServer.getInstance().getPluginManager()
+		plugin = (GameCenterPlugin) XMPPServer.getInstance().getPluginManager()
 				.getPlugin("restapi");
 		userServiceController = UserServiceLegacyController.getInstance();
 	}

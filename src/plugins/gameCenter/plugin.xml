@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin>
+    <class>org.jivesoftware.openfire.plugin.rest.GameCenterPlugin</class>
+    <name>GameCenter</name>
+    <description>Gamecenter Plugins</description>
+    <author>Roman :)</author>
+    <version>1.0.0</version>
+    <date>06/29/2015</date>
+    <minServerVersion>3.9.0</minServerVersion>
+</plugin>

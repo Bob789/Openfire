@@ -11,7 +11,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.jivesoftware.openfire.plugin.rest.RESTServicePlugin;
+import org.jivesoftware.openfire.plugin.rest.GameCenterPlugin;
 import org.jivesoftware.openfire.plugin.rest.entity.SystemProperties;
 import org.jivesoftware.openfire.plugin.rest.entity.SystemProperty;
 import org.jivesoftware.openfire.plugin.rest.exceptions.ServiceException;
@@ -19,11 +19,11 @@ import org.jivesoftware.openfire.plugin.rest.exceptions.ServiceException;
 @Path("restapi/v1/system/properties")
 public class RestAPIService {
 
-	private RESTServicePlugin plugin;
+	private GameCenterPlugin plugin;
 
 	@PostConstruct
 	public void init() {
-		plugin = RESTServicePlugin.getInstance();
+		plugin = GameCenterPlugin.getInstance();
 	}
 
 	@GET

@@ -30,7 +30,7 @@ public class AuthFilter implements ContainerRequestFilter {
 	private HttpServletRequest httpRequest;
 
 	/** The plugin. */
-	private RESTServicePlugin plugin = (RESTServicePlugin) XMPPServer.getInstance().getPluginManager()
+	private GameCenterPlugin plugin = (GameCenterPlugin) XMPPServer.getInstance().getPluginManager()
 			.getPlugin("restapi");
 
 	/*

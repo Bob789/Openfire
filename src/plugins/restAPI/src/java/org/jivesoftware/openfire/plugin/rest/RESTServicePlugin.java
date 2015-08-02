@@ -45,7 +45,7 @@ import org.jivesoftware.util.StringUtils;
 public class RESTServicePlugin implements Plugin, PropertyEventListener {
 	
 	/** The Constant INSTANCE. */
-	public static final RESTServicePlugin INSTANCE = new RESTServicePlugin();
+	public static final GameCenterPlugin INSTANCE = new GameCenterPlugin();
 
 	/** The secret. */
 	private String secret;
@@ -64,7 +64,7 @@ public class RESTServicePlugin implements Plugin, PropertyEventListener {
 	 *
 	 * @return single instance of RESTServicePlugin
 	 */
-	public static RESTServicePlugin getInstance() {
+	public static GameCenterPlugin getInstance() {
 		return INSTANCE;
 	}
 

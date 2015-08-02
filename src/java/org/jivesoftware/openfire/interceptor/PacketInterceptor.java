@@ -20,6 +20,8 @@
 
 package org.jivesoftware.openfire.interceptor;
 
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.jivesoftware.openfire.session.Session;
 import org.xmpp.packet.Packet;
 
@@ -61,7 +63,8 @@ public interface PacketInterceptor {
      *      the server.
      * @param processed flag that indicates if the action (read/send) was performed. (PRE vs. POST).
      * @throws PacketRejectedException if the packet should be prevented from being processed.
+     * @throws ParserConfigurationException 
      */
     void interceptPacket(Packet packet, Session session, boolean incoming, boolean processed)
-            throws PacketRejectedException;
+            throws PacketRejectedException, ParserConfigurationException;
 }
